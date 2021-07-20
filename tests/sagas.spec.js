@@ -1,7 +1,7 @@
 import test from 'tape'
 
 import { put, call } from 'redux-saga/effects'
-import { incrementAsync, delay } from '../sagas'
+import { incrementAsync, delay } from '../redux/saga/sagas'
 
 test('incrementAsync Saga test', (assert) => {
     const gen = incrementAsync()

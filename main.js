@@ -1,17 +1,9 @@
 import "babel-polyfill"
-import { createStore, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import store from './redux/store/store'
 
-import Counter from './Counter'
-import reducer from './reducers'
-import rootSaga from './sagas'
-
-const sagaMiddleware = createSagaMiddleware()
-const store = createStore(reducer,applyMiddleware(sagaMiddleware))
-
-sagaMiddleware.run(rootSaga)
+import Counter from './component/Counter'
 
 const action = type => store.dispatch({type})
 
