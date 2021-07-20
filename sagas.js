@@ -3,7 +3,7 @@ import {put, takeEvery,all,call} from 'redux-saga/effects'
 export const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
 function* helloSaga() {
-    console.log('Hello Sagas!')
+    console.log('Hello!')
 }
 
 export function* incrementAsync() {
